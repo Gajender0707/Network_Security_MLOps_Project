@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from src import Logger
 
 
 list_of_files=[
@@ -52,6 +53,9 @@ list_of_files=[
     #Notebook
     "research/reasearch.ipynb",
 
+    ".env",
+    "README.md",
+
     ".gitignore",
     "Dockerfile",
     "requirements.txt",
@@ -68,6 +72,7 @@ for file in list_of_files:
 
     if dirname!="":
         os.makedirs(dirname,exist_ok=True)
+        Logger.info("Directory Created Successfully....")
 
     if (not os.path.exists(file)) or (os.path.getsize(file)==0):
         with open(file,"w") as f:
