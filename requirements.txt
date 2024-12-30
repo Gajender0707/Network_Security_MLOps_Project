@@ -2,7 +2,12 @@ pandas
 numpy
 setuptools
 scikit-learn
-
-
+pymongo[srv]
+pymongo
+python-dotenv
+certifi
+pyYAML
+ensure
+dotmap
 
 # -e .

@@ -59,6 +59,8 @@ list_of_files=[
     "src/exception/__init__.py",
     "src/exception/exception.py",
 
+
+
     ".env",
     "README.md",
 
@@ -74,7 +76,7 @@ list_of_files=[
 for file in list_of_files:
     file=Path(file)
     dirname,filename=os.path.split(file)
-    print(dirname,filename)
+    print(dirname)
 
     if dirname!="":
         os.makedirs(dirname,exist_ok=True)
