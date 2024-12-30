@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from src import Logger
+from src.logging.logging import Logger
 
 
 list_of_files=[
@@ -52,6 +52,12 @@ list_of_files=[
 
     #Notebook
     "research/reasearch.ipynb",
+
+    #Logger and Exception
+    "src/logging/__init__.py",
+    "src/logging/logging.py",
+    "src/exception/__init__.py",
+    "src/exception/exception.py",
 
     ".env",
     "README.md",
