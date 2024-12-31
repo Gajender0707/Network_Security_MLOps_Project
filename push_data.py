@@ -41,7 +41,7 @@ class NetworkDataExtraction:
     def push_to_mongodb(self):
         try:
             records=self.csv_to_json_convertor()
-            
+            print(records)
         except Exception as e:
             raise CustomException(e)
 
