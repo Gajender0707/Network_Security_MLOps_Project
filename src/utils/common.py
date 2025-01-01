@@ -20,6 +20,19 @@ def read_yaml(filepath:Path):
     return filedata
 
 
+@ensure_annotations
+def make_dir(filepath:Path):
+    dirpath,file_name=os.path.split(filepath)
+    os.makedirs(dirpath,exist_ok=True)
+    Logger.info(f"New Directory has been created on the Location {dirpath}.")
+
+
+# make_dir(Path("/Users/sanju/Documents/DS/MLOps/MLOps_Projects/Network_Security_Project/data/phisingData.csv"))
+
+
+
+
+
 
 
 
