@@ -11,7 +11,7 @@ from pathlib import Path
 from pymongo import MongoClient
 from sklearn.model_selection import train_test_split
 from dotenv import load_dotenv
-import certifi
+import certifi #this is for the continueous connection with mongodb server client.
 
 
 load_dotenv()
