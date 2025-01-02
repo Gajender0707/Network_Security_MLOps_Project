@@ -1,6 +1,7 @@
 from src .exception.exception import CustomException
 from src.logging.logging import Logger
 from src.utils.common import make_dir,read_yaml
+from src.entity.artifacts_entity import DataIngestionArtifacts
 from src.entity.config_entity import TrainingPipelineConfig
 from src.entity.config_entity import DataIngestionConfig
 import pandas as pd
@@ -28,10 +29,13 @@ class DataIngestion:
             db=self.client[self.data_ingestion_config.database_name]
             collection=db[self.data_ingestion_config.collection_name]
             documents=collection.find()
+            # print(documents)
             Logger.info("Documemnts Extract Database Sucessfully...")
-            
+            documents_list = list(documents)
+            # print(documents_list)
             df=pd.DataFrame(list(documents))
             Logger.info("Dataframe Create Successfully....")
+            print(df)
             return df
         
         except Exception as e:
@@ -71,10 +75,17 @@ class DataIngestion:
             raise CustomException(e)
 
 
-    def initiate_data_ingestion(self):
+    def initiate_data_ingestion(self)-> DataIngestionArtifacts:
         try:
             self.export_df_into_feature_store()
             self.split_data_into_train_and_test()
+            data_ingestion_artifacts=DataIngestionArtifacts(
+                training_data_path=self.data_ingestion_config.training_file_path,
+                testing_data_path=self.data_ingestion_config.testing_file_path
+            )
+            return data_ingestion_artifacts
+
+
 
         except Exception as e:
             raise CustomException(e)
@@ -85,4 +96,6 @@ if __name__=="__main__":
     training_pipeline_config=TrainingPipelineConfig()
     cofig=DataIngestionConfig(training_pipeline_config)
     obj=DataIngestion(cofig)
-    obj.initiate_data_ingestion()
+    # data_ingestion_artifacts=obj.initiate_data_ingestion()
+    # print(data_ingestion_artifacts)
+    obj.export_collection_to_dataframe()
