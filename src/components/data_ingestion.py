@@ -11,6 +11,7 @@ from pathlib import Path
 from pymongo import MongoClient
 from sklearn.model_selection import train_test_split
 from dotenv import load_dotenv
+import certifi
 
 
 load_dotenv()
@@ -20,26 +21,32 @@ MONGO_DB_URI=os.getenv("MONGODB_URI")
 class DataIngestion:
     def __init__(self,data_ingestion_config:DataIngestionConfig):
         self.data_ingestion_config=data_ingestion_config
-        self.client=MongoClient(MONGO_DB_URI)
+        # self.client=MongoClient(MONGO_DB_URI)
+        self.client=MongoClient("mongodb+srv://iamsanju0707:DWVLL5PqpDwtXOjl@cluster0.4ul2y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+                                 tlsCAFile=certifi.where())
         Logger.info("DataIngestion Config Fetch Sucessfully..")
 
 
     def export_collection_to_dataframe(self):
         try:
             db=self.client[self.data_ingestion_config.database_name]
+            # print(db)
             collection=db[self.data_ingestion_config.collection_name]
+            # print(collection)
             documents=collection.find()
             # print(documents)
             Logger.info("Documemnts Extract Database Sucessfully...")
             documents_list = list(documents)
             # print(documents_list)
-            df=pd.DataFrame(list(documents))
+            df=pd.DataFrame(documents_list)
             Logger.info("Dataframe Create Successfully....")
-            print(df)
+            # print(df)
+            # print(self.client.server_info())
             return df
         
         except Exception as e:
             raise CustomException(e)
+
         
 
     def export_df_into_feature_store(self):
@@ -96,6 +103,6 @@ if __name__=="__main__":
     training_pipeline_config=TrainingPipelineConfig()
     cofig=DataIngestionConfig(training_pipeline_config)
     obj=DataIngestion(cofig)
-    # data_ingestion_artifacts=obj.initiate_data_ingestion()
-    # print(data_ingestion_artifacts)
-    obj.export_collection_to_dataframe()
+    data_ingestion_artifacts=obj.initiate_data_ingestion()
+    print(data_ingestion_artifacts)
+    # obj.export_collection_to_dataframe()
