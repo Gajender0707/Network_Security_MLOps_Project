@@ -49,7 +49,7 @@ class DataValidationConfig:
                                                  training_pipeline.TEST_FILE_NAME)
         self.data_drift_report_file_path=os.path.join(self.data_validation_dir,training_pipeline.DATA_VALIDATION_DRIFT_REPORT_FILE_DIR,
                                                       training_pipeline.DATA_VALIDATION_DRIFT_REPORT_FILE_NAME)
-        
+        self.schema_file_path=training_pipeline.SCHEMA_FILE_PATH
         
 
 

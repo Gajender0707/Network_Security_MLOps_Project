@@ -39,6 +39,8 @@ class DataIngestion:
             documents_list = list(documents)
             # print(documents_list)
             df=pd.DataFrame(documents_list)
+            if "_id" in df.columns:
+                df=df.drop(columns=["_id"])
             Logger.info("Dataframe Create Successfully....")
             # print(df)
             # print(self.client.server_info())
@@ -99,10 +101,10 @@ class DataIngestion:
 
 
 
-if __name__=="__main__":
-    training_pipeline_config=TrainingPipelineConfig()
-    cofig=DataIngestionConfig(training_pipeline_config)
-    obj=DataIngestion(cofig)
-    data_ingestion_artifacts=obj.initiate_data_ingestion()
-    print(data_ingestion_artifacts)
-    # obj.export_collection_to_dataframe()
+# if __name__=="__main__":
+#     training_pipeline_config=TrainingPipelineConfig()
+#     cofig=DataIngestionConfig(training_pipeline_config)
+#     obj=DataIngestion(cofig)
+#     data_ingestion_artifacts=obj.initiate_data_ingestion()
+#     print(data_ingestion_artifacts)
+#     # obj.export_collection_to_dataframe()
