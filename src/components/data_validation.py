@@ -73,8 +73,9 @@ class DataValidation:
             status=self.validate_number_of_columns(df)
             Logger.info(f"Status Updated Sucessfully..  and Status is {status}")
             if status==True:
-                error_message="Number of Features are Equal to  schema features"
-            #validate train data inseration
+                message="Number of Features are Equal to  schema features"
+                Logger.info(message)
+                #validate train data inseration
                 train_data_set=self.read_data(self.data_ingestion_artifacts.training_data_path)
                 make_dir(Path(self.data_validation_config.valid_train_file_path))
                 train_data_set.to_csv(self.data_validation_config.valid_train_file_path,header=False,index=False)
@@ -85,6 +86,21 @@ class DataValidation:
                 make_dir(Path(self.data_validation_config.valid_test_file_path))
                 test_data_set.to_csv(self.data_validation_config.valid_test_file_path,header=False,index=False)
                 Logger.info("Validated Test data has been saved...")
+            else:
+
+                message="Number of Features are Not Equal to  schema features"
+                Logger.info(message)
+                #validate train data inseration
+                train_data_set=self.read_data(self.data_ingestion_artifacts.training_data_path)
+                make_dir(Path(self.data_validation_config.invalid_train_file_path))
+                train_data_set.to_csv(self.data_validation_config.invalid_train_file_path,header=False,index=False)
+                Logger.info("InValidated Training data has been saved...")
+
+                #validate test data inseration
+                test_data_set=self.read_data(self.data_ingestion_artifacts.testing_data_path)
+                make_dir(Path(self.data_validation_config.invalid_test_file_path))
+                test_data_set.to_csv(self.data_validation_config.invalid_test_file_path,header=False,index=False)
+                Logger.info("InValidated Test data has been saved...")
 
             #data drift Report updation
             data_drift_update_report=self.detect_dataset_drift(train_data_set,test_data_set)
