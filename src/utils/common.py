@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 from dotmap import DotMap
+from typing import List
 
 load_dotenv()
 
@@ -27,12 +28,11 @@ def make_dir(filepath:Path):
     Logger.info(f"New Directory has been created on the Location {dirpath}.")
 
 
-# make_dir(Path("/Users/sanju/Documents/DS/MLOps/MLOps_Projects/Network_Security_Project/data/phisingData.csv"))
-
-
-
-
-
+def write_yaml(filepath,content):
+    with open(filepath,"w") as f:
+        yaml.dump(content,f)
+        
+    return Logger.info("Yaml file Created Sucessfully..")
 
 
 
