@@ -2,7 +2,8 @@ from src.components.data_ingestion import DataIngestion
 from src.entity.config_entity import DataIngestionConfig,TrainingPipelineConfig,DataValidationConfig
 from src.components.data_validation import DataValidation
 from src.logging.logging import Logger
-from src.pipeline.data_ingestion_pipeline import DataIngestion
+from src.pipeline.data_ingestion_pipeline import DataIngestionPipeline
+
 
 
 STAGE_NAME="<<<<<<<<<<<<<< Data Validation Pipeline >>>>>>>>>>>>>>>>>>>>"
@@ -12,11 +13,8 @@ class DataValidationPipeline:
 
     def initiate_data_validation_pipeline(self):
             Logger.info(f"{STAGE_NAME} has been Started")
-            training_pipeline_config=TrainingPipelineConfig()
-            cofig=DataIngestionConfig(training_pipeline_config)
-            obj=DataIngestion(cofig)
-            data_ingestion_artifacts=obj.initiate_data_ingestion()
-            #validation pipeline
+            data_ingestion_pipeline_obj=DataIngestionPipeline()
+            data_ingestion_artifacts=data_ingestion_pipeline_obj.initiate_data_ingestion_pipeline()
             training_pipeline_config=TrainingPipelineConfig()
             data_validation_config=DataValidationConfig(training_pipeline_config)
             obj=DataValidation(data_validation_config,data_ingestion_artifacts)

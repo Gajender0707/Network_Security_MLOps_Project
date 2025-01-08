@@ -1,9 +1,10 @@
 import os
 from pathlib import Path
 from src.Constant import training_pipeline
-from src.entity.artifacts_entity import DataValidationArtifact
+from src.entity.artifacts_entity import DataValidationArtifact,DataTransformationArtifact
 from datetime import datetime
 from src.utils.common import make_dir
+
 
 #this training pipeline is the common for all the further configuration
 class TrainingPipelineConfig:
@@ -11,7 +12,7 @@ class TrainingPipelineConfig:
         self.artifacts_dir=training_pipeline.ARTIFACTS_DIR
 
 
-
+#Data Ingestion config
 class DataIngestionConfig:
     def __init__(self,data_ingestion_config:TrainingPipelineConfig):
         self.data_ingestion_config=data_ingestion_config
@@ -32,6 +33,7 @@ class DataIngestionConfig:
         self.collection_name=training_pipeline.DATA_INGESTION_COLLECTION_NAME
 
 
+#Data Validation config
 class DataValidationConfig:
 
     def __init__(self,data_validation_config:TrainingPipelineConfig):
@@ -54,7 +56,7 @@ class DataValidationConfig:
         
 
 
-
+#data Transformation config
 class DataTransformationConfig:
 
     def __init__(self):
@@ -83,13 +85,33 @@ class DataTransformationConfig:
         self.params_file_path=training_pipeline.DATA_TRANSFORMATION_PARAMS_FILE_PATH
 
 
+
+class ModelTrainerConfig:
+
+    def __init__(self,model_trainer_basic_config:TrainingPipelineConfig
+                 ):
+        self.model_trainer_basic_config=model_trainer_basic_config
+        self.model_trainer_dir=os.path.join(
+            model_trainer_basic_config.artifacts_dir,training_pipeline.MODEL_TRAINER_DIR
+
+        )
+        self.trained_model_dir=os.path.join(
+            self.model_trainer_dir,training_pipeline.MODEL_TRAINER_TRAINED_MODEL_DIR
+        )
+
+        self.model_trainer_file=os.path.join(self.trained_model_dir,training_pipeline.MODEL_TRAINER_TRAINED_MODEL_FILE)
+
+
+        
+        
         
 
 
-# if __name__=="__main__":
-#     # training_config=TrainingPipelineConfig()
-#     obj=DataTransformationConfig()
-#     print(obj.transformed_train_file_path)
+if __name__=="__main__":
+    training_config=TrainingPipelineConfig()
+
+    obj=ModelTrainerConfig(training_config)
+    print(obj.model_trainer_dir)
         
 
 

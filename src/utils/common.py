@@ -29,7 +29,7 @@ def make_dir(filepath:Path):
     os.makedirs(dirpath,exist_ok=True)
     Logger.info(f"New Directory has been created on the Location {dirpath}.")
 
-
+#write the content in the yaml file
 def write_yaml(filepath,content):
     with open(filepath,"w") as f:
         yaml.dump(content,f)
@@ -37,17 +37,28 @@ def write_yaml(filepath,content):
     return Logger.info("Yaml file Created Sucessfully..")
 
 
+#save the numpy array
 def save_array(filepath,arr):
     try:
         make_dir(Path(filepath))
 
         with open(filepath, "w") as f:
             np.save(filepath,arr)
-
+    except Exception as e:
+        raise CustomException(e)
+    
+## Load the Numpy array
+def load_array(filepath):
+    try:
+        with open(filepath, "rb") as f:
+            arr=np.load(f)
+        return arr
     except Exception as e:
         raise CustomException(e)
 
 
+
+#save the pickle object
 def save_object(filepath,obj):
     try:
         make_dir(Path(filepath))
@@ -57,8 +68,20 @@ def save_object(filepath,obj):
 
     except Exception as e:
         raise CustomException(e)
+    
 
-        
+
+## Load the pickle object
+def load_object(filepath):
+    try:
+        with open(filepath,"rb") as f:
+            Object=pickle.load(f)
+            Logger.info(f"Object has been save to {filepath}")
+            return Object
+
+    except Exception as e:
+        raise CustomException(e)
+    
 
 
 

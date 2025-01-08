@@ -42,6 +42,13 @@ DATA_TRANSFORMATION_PARAMS_FILE_PATH:str="/Users/sanju/Documents/DS/MLOps/MLOps_
 
 
 
+#Model Trainer Constant varibles which are must for the model trainer
+MODEL_TRAINER_DIR:str="model_trainer"
+MODEL_TRAINER_TRAINED_MODEL_DIR:str="trained_model"
+MODEL_TRAINER_TRAINED_MODEL_FILE:str="model.pkl"
+
+
+
 
 
 
