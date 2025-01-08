@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from src.Constant import training_pipeline
+from src.entity.artifacts_entity import DataValidationArtifact
 from datetime import datetime
 from src.utils.common import make_dir
 
@@ -54,13 +55,41 @@ class DataValidationConfig:
 
 
 
+class DataTransformationConfig:
+
+    def __init__(self,data_transformation_config:TrainingPipelineConfig):
+        self.data_transformation_config=data_transformation_config
+        #data transformation dir
+        self.data_transformation_dir=os.path.join(self.data_transformation_config.artifacts_dir,training_pipeline.DATA_TRANSFORMATION_DIR)
+
+        #transformed data dir
+        self.transformed_data_dir=os.path.join(self.data_transformation_dir,training_pipeline.DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR)
+
+        # transformed train file path
+        self.transformed_train_file_path=os.path.join(self.transformed_data_dir,
+                                                      training_pipeline.TRAIN_FILE_NAME.replace(".csv",".npy"))
+        
+        #transformed test data file path
+        self.transformed_test_file_path=os.path.join(self.transformed_data_dir,
+                                                      training_pipeline.TEST_FILE_NAME.replace(".csv",".npy"))
+        
+
+        #transformed object file path
+
+        self.transformed_object_file_path=os.path.join(self.transformed_data_dir,training_pipeline.DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
+                                                       training_pipeline.DATA_TRANSFORMATION_TRANSFORMED_OBJECT_FILE_NAME)
+        
+        # params file path
+        self.params_file_path=training_pipeline.DATA_TRANSFORMATION_PARAMS_FILE_PATH
+
+
         
 
 
 # if __name__=="__main__":
 #     training_config=TrainingPipelineConfig()
-#     obj=DataIngestionConfig(training_config)
-#     print(obj.feature_store_file_path)
+#     obj=DataTransformationConfig(training_config)
+#     print(obj.transformed_object_file_path)
         
 
 
