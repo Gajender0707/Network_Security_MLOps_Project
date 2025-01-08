@@ -78,13 +78,13 @@ class DataValidation:
                 #validate train data inseration
                 train_data_set=self.read_data(self.data_ingestion_artifacts.training_data_path)
                 make_dir(Path(self.data_validation_config.valid_train_file_path))
-                train_data_set.to_csv(self.data_validation_config.valid_train_file_path,header=False,index=False)
+                train_data_set.to_csv(self.data_validation_config.valid_train_file_path,header=True,index=False)
                 Logger.info("Validated Training data has been saved...")
 
                 #validate test data inseration
                 test_data_set=self.read_data(self.data_ingestion_artifacts.testing_data_path)
                 make_dir(Path(self.data_validation_config.valid_test_file_path))
-                test_data_set.to_csv(self.data_validation_config.valid_test_file_path,header=False,index=False)
+                test_data_set.to_csv(self.data_validation_config.valid_test_file_path,header=True,index=False)
                 Logger.info("Validated Test data has been saved...")
             else:
 
@@ -125,18 +125,18 @@ class DataValidation:
 
 
 
-from src.components.data_ingestion import DataIngestion
-from src.entity.config_entity import DataIngestionConfig
-if __name__=="__main__":
+# from src.components.data_ingestion import DataIngestion
+# from src.entity.config_entity import DataIngestionConfig
+# if __name__=="__main__":
 
-    #data ingestion pipeline
-    training_pipeline_config=TrainingPipelineConfig()
-    cofig=DataIngestionConfig(training_pipeline_config)
-    obj=DataIngestion(cofig)
-    data_ingestion_artifacts=obj.initiate_data_ingestion()
-    #validation pipeline
-    training_pipeline_config=TrainingPipelineConfig()
-    data_validation_config=DataValidationConfig(training_pipeline_config)
-    obj=DataValidation(data_validation_config,data_ingestion_artifacts)
-    data_validation_artifacts=obj.initiate_data_validation()
-    print(data_validation_artifacts)
+#     #data ingestion pipeline
+#     training_pipeline_config=TrainingPipelineConfig()
+#     cofig=DataIngestionConfig(training_pipeline_config)
+#     obj=DataIngestion(cofig)
+#     data_ingestion_artifacts=obj.initiate_data_ingestion()
+#     #validation pipeline
+#     training_pipeline_config=TrainingPipelineConfig()
+#     data_validation_config=DataValidationConfig(training_pipeline_config)
+#     obj=DataValidation(data_validation_config,data_ingestion_artifacts)
+#     data_validation_artifacts=obj.initiate_data_validation()
+#     print(data_validation_artifacts)

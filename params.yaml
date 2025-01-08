@@ -1,1 +1,5 @@
+knn_imputer_params:
+  n_neighbors: 3
+  weights: uniform
+  metric: nan_euclidean
 

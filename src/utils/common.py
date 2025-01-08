@@ -7,6 +7,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 from dotmap import DotMap
 from typing import List
+import numpy as np
+import pickle
 
 load_dotenv()
 
@@ -33,6 +35,34 @@ def write_yaml(filepath,content):
         yaml.dump(content,f)
         
     return Logger.info("Yaml file Created Sucessfully..")
+
+
+def save_array(filepath,arr):
+    try:
+        make_dir(Path(filepath))
+
+        with open(filepath, "w") as f:
+            np.save(filepath,arr)
+
+    except Exception as e:
+        raise CustomException(e)
+
+
+def save_object(filepath,obj):
+    try:
+        make_dir(Path(filepath))
+        with open(filepath,"wb") as f:
+            pickle.dump(obj,f)
+            Logger.info(f"Object has been save to {filepath}")
+
+    except Exception as e:
+        raise CustomException(e)
+
+        
+
+
+
+        
 
 
 

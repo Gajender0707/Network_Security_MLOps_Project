@@ -38,7 +38,7 @@ DATA_TRANSFORMATION_TRAIN_DATA_FILE:str="train.npy"
 DATA_TRANSFORMATION_TEST_DATA_FILE:str="test.npy"
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR:str="transformed_object"
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT_FILE_NAME:str="preprocessor.pkl"
-DATA_TRANSFORMATION_PARAMS_FILE_PATH:str="params.yaml"
+DATA_TRANSFORMATION_PARAMS_FILE_PATH:str="/Users/sanju/Documents/DS/MLOps/MLOps_Projects/Network_Security_Project/params.yaml"
 
 
 

@@ -57,10 +57,10 @@ class DataValidationConfig:
 
 class DataTransformationConfig:
 
-    def __init__(self,data_transformation_config:TrainingPipelineConfig):
-        self.data_transformation_config=data_transformation_config
+    def __init__(self):
+        self.target_column=training_pipeline.TARGET_COLUMN
         #data transformation dir
-        self.data_transformation_dir=os.path.join(self.data_transformation_config.artifacts_dir,training_pipeline.DATA_TRANSFORMATION_DIR)
+        self.data_transformation_dir=os.path.join(training_pipeline.ARTIFACTS_DIR,training_pipeline.DATA_TRANSFORMATION_DIR)
 
         #transformed data dir
         self.transformed_data_dir=os.path.join(self.data_transformation_dir,training_pipeline.DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR)
@@ -87,9 +87,9 @@ class DataTransformationConfig:
 
 
 # if __name__=="__main__":
-#     training_config=TrainingPipelineConfig()
-#     obj=DataTransformationConfig(training_config)
-#     print(obj.transformed_object_file_path)
+#     # training_config=TrainingPipelineConfig()
+#     obj=DataTransformationConfig()
+#     print(obj.transformed_train_file_path)
         
 
 
