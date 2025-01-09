@@ -37,10 +37,11 @@ class ClassificationMetricArtifact:
     f1_score:float
     precision_score:float
     recall_score:float
+    accuracy_score:float
 
 
 
 @dataclass
-class ModelEvaluation:
+class ModelEvaluationArtifacts:
     train_metric_file_path:ClassificationMetricArtifact
     test_metric_file_path:ClassificationMetricArtifact

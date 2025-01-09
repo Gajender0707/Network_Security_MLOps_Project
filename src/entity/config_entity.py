@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 from src.Constant import training_pipeline
-from src.entity.artifacts_entity import DataValidationArtifact,DataTransformationArtifact
+from src.entity.artifacts_entity import DataValidationArtifact,DataTransformationArtifact,ModelEvaluationArtifacts
 from datetime import datetime
 from src.utils.common import make_dir
 from src.Constant.training_pipeline import DATA_TRANSFORMATION_PARAMS_FILE_PATH
@@ -85,7 +85,7 @@ class DataTransformationConfig:
         self.params_file_path=training_pipeline.DATA_TRANSFORMATION_PARAMS_FILE_PATH
 
 
-
+#Model Trainer configuration
 class ModelTrainerConfig:
 
     def __init__(self,model_trainer_basic_config:TrainingPipelineConfig
@@ -103,16 +103,34 @@ class ModelTrainerConfig:
         self.trained_model_file_path=os.path.join(self.trained_model_dir,training_pipeline.MODEL_TRAINER_TRAINED_MODEL_FILE)
 
 
+
+
+#Model evaluation configuration
+class ModelEvaluationConfig:
+
+    def __init__(self,model_evaluation_basic_config:TrainingPipelineConfig):
+        self.model_evalution_base_dir=os.path.join(model_evaluation_basic_config.artifacts_dir,training_pipeline.MODEL_EVALUATION_DIR)
+
+        #train metric file path
+        self.train_metric_file_path=os.path.join(self.model_evalution_base_dir,training_pipeline.MODEL_EVALUATION_TRAIN_METRIC_DIR,
+                                                 training_pipeline.MODEL_EVALUATION_TRAIN_METRIC_FILE_PATH)
         
+        #test metric file path
+        self.test_metric_file_path=os.path.join(self.model_evalution_base_dir,training_pipeline.MODEL_EVALUATION_TEST_METRIC_DIR,
+                                                training_pipeline.MODEL_EVALUATION_TEST_METRIC_FILE_PATH)
+        
+
+
+          
         
         
 
 
-if __name__=="__main__":
-    training_config=TrainingPipelineConfig()
+# if __name__=="__main__":
+#     training_config=TrainingPipelineConfig()
 
-    obj=ModelTrainerConfig(training_config)
-    print(obj.model_trainer_dir)
+#     obj=ModelEvaluationConfig(training_config)
+#     print(obj.test_metric_file_path)
         
 
 

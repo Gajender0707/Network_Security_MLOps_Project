@@ -48,7 +48,12 @@ MODEL_TRAINER_TRAINED_MODEL_DIR:str="trained_model"
 MODEL_TRAINER_TRAINED_MODEL_FILE:str="model.pkl"
 
 
-
+#Model Evaluation Contants
+MODEL_EVALUATION_DIR:str="model_evaluation"
+MODEL_EVALUATION_TRAIN_METRIC_DIR:str="train_metrics"
+MODEL_EVALUATION_TEST_METRIC_DIR:str="test_metrics"
+MODEL_EVALUATION_TRAIN_METRIC_FILE_PATH:str="train_metric.json"
+MODEL_EVALUATION_TEST_METRIC_FILE_PATH:str="test_metric.json"
 
 
 
