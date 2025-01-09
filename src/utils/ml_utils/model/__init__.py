@@ -22,11 +22,14 @@ def model_evaluate(X_train,y_train,X_test,y_test,models,models_params):
                 # Best hyperparameters
                 # print("Best Hyperparameters:", grid_search.best_params_)
 
+                model.set_params(**grid_search.best_params_)
+                model.fit(X_train,y_train)
+
                 # Best estimator
-                best_model = grid_search.best_estimator_
+                # best_model = grid_search.best_estimator_
 
                 # Evaluate the model
-                y_pred = best_model.predict(X_test)
+                y_pred = model.predict(X_test)
                 test_accuracy_score= accuracy_score(y_test, y_pred)
 
                 model_report[model_name]=test_accuracy_score

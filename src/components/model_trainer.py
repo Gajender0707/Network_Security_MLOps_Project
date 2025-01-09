@@ -53,12 +53,18 @@ class ModelTrainer:
             y_test=test_data[:,-1]
 
             best_model=self.train_model(X_train,y_train,X_test,y_test)
+            best_model.fit(X_train,y_train)
+
+
+            # y_train_pred=best_model.predict(X_train)
+
+            # print(y_train_pred)
 
 
             #Preprocessor
             preprocessor=load_object(self.data_transformation_artifacts.transformed_object_file_path)
 
-            # model=NetworkModel(preprocessor,best_model)
+            Network_Model=NetworkModel(preprocessor,best_model)
 
             save_object(self.model_trainer_config.trained_model_file_path,best_model)
             Logger.info("Model has been saved Sucessfully...")

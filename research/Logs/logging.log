@@ -15,3 +15,17 @@
 2025-01-09 11:10:53,092 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
 2025-01-09 11:10:53,235 - INFO -common - Object has been save to artifacts/data_transformation/transformed/transformed_object/preprocessor.pkl
 2025-01-09 11:15:32,462 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-09 12:39:46,052 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 12:39:46,248 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 12:39:54,275 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-09 12:44:00,087 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 12:44:45,041 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 12:44:45,255 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 12:44:52,141 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-09 12:46:33,869 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 12:46:34,047 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 12:46:41,090 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-09 12:48:55,874 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 12:48:56,047 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 12:49:02,952 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-09 13:15:56,451 - INFO -common - Object has been save to artifacts/data_transformation/transformed/transformed_object/preprocessor.pkl
