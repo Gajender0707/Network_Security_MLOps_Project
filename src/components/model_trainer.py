@@ -11,6 +11,13 @@ class ModelTrainer:
         self.data_transformation_artifacts=data_transformation_artifacts
         self.model_trainer_config=model_trainer_config
 
+    def train_model(self,X_train,y_train,X_test,y_test):
+        try:
+            pass
+        except Exception as e:
+            raise CustomException(e)
+        
+
 
     def initiate_model_trainer(self):
         try:

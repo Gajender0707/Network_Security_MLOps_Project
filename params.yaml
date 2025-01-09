@@ -3,6 +3,74 @@ knn_imputer_params:
   weights: uniform
   metric: nan_euclidean
 
+models:
+  Random_Forest: RandomForestClassifier(verbose=1)
+  Decision_Tree: DecisionTreeClassifier()
+  Gradient_Boosting: GradientBoostingClassifier(verbose=1)
+  Logistic_Regression: LogisticRegression(verbose=1)
+  AdaBoost: AdaBoostClassifier()
+
+models_params:
+  
+  Random_Forest:
+    criterion:
+     - gini
+     - entropy
+
+    max_features:
+      - sqrt
+      - log2
+    n_estimators:
+      - 8
+      - 16
+      - 32
+      
+  Decision_Tree:
+    splitter:
+      - best
+      - random
+    criterion:
+     - gini
+     - entropy
+
+    max_features:
+      - sqrt
+      - log2
+
+  Gradient_Boosting:
+    loss:
+      - log_loss
+      - exponential
+
+    learning_rate:
+      - 0.1
+      - .05
+
+    subsample:
+      - 0.6
+      - 0.7
+
+  Logistic_Regression: {}
+    
+    
+  AdaBoost:
+    learning_rate:
+      - .1
+      - .01
+
+    n_estimators:
+      - 8
+      - 16
+
+
+
+
+                     
+
+
+  
+            
+
 
 
 
