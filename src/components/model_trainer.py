@@ -1,4 +1,4 @@
-from src.entity.artifacts_entity import DataTransformationArtifact
+from src.entity.artifacts_entity import DataTransformationArtifact,ModelTrainerArtifacts
 from src.entity.config_entity import ModelTrainerConfig,TrainingPipelineConfig
 from src.exception.exception import CustomException
 from src.logging.logging import Logger
@@ -43,7 +43,7 @@ class ModelTrainer:
         
 
 
-    def initiate_model_trainer(self):
+    def initiate_model_trainer(self)-> ModelTrainerArtifacts:
         try:
             train_data=load_array(self.data_transformation_artifacts.transformed_train_file_path)
             test_data=load_array(self.data_transformation_artifacts.transformed_test_file_path)
@@ -70,16 +70,22 @@ class ModelTrainer:
             Logger.info("Model has been saved Sucessfully...")
 
 
+            model_trainer_artifacts=ModelTrainerArtifacts(
+                self.model_trainer_config.trained_model_file_path
+            )
+            return model_trainer_artifacts
+
+
 
         except Exception as e:
             raise CustomException(e)
         
 
-if __name__=="__main__":
-    data_transforamtion_artifacts=DataTransformationPipeline().initiate_data_transformation_pipeline()
-    # print(data_transforamtion_artifacts.initiate_data_transformation_pipeline())
-    model_trainer_basic_config=TrainingPipelineConfig()
-    model_trainer_config=ModelTrainerConfig(model_trainer_basic_config)
-    obj=ModelTrainer(data_transforamtion_artifacts,model_trainer_config)
-    res=obj.initiate_model_trainer()
-    print(res)
+# if __name__=="__main__":
+#     data_transforamtion_artifacts=DataTransformationPipeline().initiate_data_transformation_pipeline()
+#     # print(data_transforamtion_artifacts.initiate_data_transformation_pipeline())
+#     model_trainer_basic_config=TrainingPipelineConfig()
+#     model_trainer_config=ModelTrainerConfig(model_trainer_basic_config)
+#     obj=ModelTrainer(data_transforamtion_artifacts,model_trainer_config)
+#     res=obj.initiate_model_trainer()
+#     print(res)
