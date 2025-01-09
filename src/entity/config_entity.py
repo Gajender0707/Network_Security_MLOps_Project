@@ -4,7 +4,7 @@ from src.Constant import training_pipeline
 from src.entity.artifacts_entity import DataValidationArtifact,DataTransformationArtifact
 from datetime import datetime
 from src.utils.common import make_dir
-
+from src.Constant.training_pipeline import DATA_TRANSFORMATION_PARAMS_FILE_PATH
 
 #this training pipeline is the common for all the further configuration
 class TrainingPipelineConfig:
@@ -90,6 +90,7 @@ class ModelTrainerConfig:
 
     def __init__(self,model_trainer_basic_config:TrainingPipelineConfig
                  ):
+        self.params_config_file_path=DATA_TRANSFORMATION_PARAMS_FILE_PATH
         self.model_trainer_basic_config=model_trainer_basic_config
         self.model_trainer_dir=os.path.join(
             model_trainer_basic_config.artifacts_dir,training_pipeline.MODEL_TRAINER_DIR
@@ -99,7 +100,7 @@ class ModelTrainerConfig:
             self.model_trainer_dir,training_pipeline.MODEL_TRAINER_TRAINED_MODEL_DIR
         )
 
-        self.model_trainer_file=os.path.join(self.trained_model_dir,training_pipeline.MODEL_TRAINER_TRAINED_MODEL_FILE)
+        self.trained_model_file_path=os.path.join(self.trained_model_dir,training_pipeline.MODEL_TRAINER_TRAINED_MODEL_FILE)
 
 
         

@@ -6,3 +6,12 @@
 2025-01-09 06:51:01,102 - INFO -common - Yaml file has been read Successfully. 
 2025-01-09 07:09:00,984 - INFO -common - Yaml file has been read Successfully. 
 2025-01-09 07:15:33,334 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 10:35:55,166 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 10:35:55,477 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 10:55:32,194 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-09 11:03:57,703 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 11:10:44,428 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 11:10:44,722 - INFO -common - Yaml file has been read Successfully. 
+2025-01-09 11:10:53,092 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-09 11:10:53,235 - INFO -common - Object has been save to artifacts/data_transformation/transformed/transformed_object/preprocessor.pkl
+2025-01-09 11:15:32,462 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
