@@ -64,3 +64,11 @@
 2025-01-13 12:57:47,601 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
 2025-01-13 12:57:47,701 - INFO -common - New Directory has been created on the Location artifacts/model_evaluation/train_metrics.
 2025-01-13 12:57:47,703 - INFO -common - Json file has been saved on the location artifacts/model_evaluation/train_metrics/train_metric.json Successfully. 
+2025-01-13 16:24:47,693 - INFO -common - Yaml file has been read Successfully. 
+2025-01-13 16:24:47,948 - INFO -common - Yaml file has been read Successfully. 
+2025-01-13 16:24:55,317 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-13 16:24:55,412 - INFO -common - Object has been save to artifacts/data_transformation/transformed/transformed_object/preprocessor.pkl
+2025-01-13 16:24:55,492 - INFO -common - Object has been save to artifacts/data_transformation/transformed/transformed_object/preprocessor.pkl
+2025-01-13 16:24:55,522 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-13 16:24:55,629 - INFO -common - New Directory has been created on the Location artifacts/model_evaluation/train_metrics.
+2025-01-13 16:24:55,630 - INFO -common - Json file has been saved on the location artifacts/model_evaluation/train_metrics/train_metric.json Successfully. 

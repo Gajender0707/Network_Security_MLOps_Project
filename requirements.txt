@@ -9,5 +9,6 @@ certifi
 pyYAML
 ensure
 dotmap
+mlflow
 
 # -e .

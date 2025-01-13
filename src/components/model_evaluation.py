@@ -5,6 +5,15 @@ from src.entity.artifacts_entity import ModelTrainerArtifacts,ModelEvaluationArt
 from src.pipeline.model_trainer_pipeline import ModelTrainerPipeline
 from src.utils.common import load_object,load_array,save_json
 from src.utils.ml_utils.metric import get_classification_score
+from dotenv import load_dotenv
+import mlflow
+import os
+from urllib.parse import urlparse
+
+load_dotenv()
+os.getenv("MLFLOW_TRACKING_URI")
+os.getenv("MLFLOW_TRACKING_USERNAME")
+os.getenv("MLFLOW_TRACKING_PASSWORD")
 
 
 class ModelEvaluation:
@@ -15,6 +24,16 @@ class ModelEvaluation:
         self.model_evaluation_config=model_evaluation_config
 
 
+    def mlflow_tracking(self,classification_report,params,best_model):
+        try:
+            mlflow.set_registry_uri(os.getenv("MLFLOW_TRACKING_URI"))
+            tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+
+            f1_score=classification_report["f1"]
+
+
+        except Exception as e:
+            raise CustomException(e)
 
 
     def initiate_model_evaluation(self) -> ModelEvaluationArtifacts:
