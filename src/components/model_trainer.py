@@ -72,9 +72,10 @@ class ModelTrainer:
 
             model_trainer_artifacts=ModelTrainerArtifacts(
                 self.model_trainer_config.trained_model_file_path,
-                test_data_file_path=self.data_transformation_artifacts.transformed_test_file_path
-                
+                train_data_file_path=self.data_transformation_artifacts.transformed_train_file_path,
+                test_data_file_path=self.data_transformation_artifacts.transformed_test_file_path   
             )
+            
             return model_trainer_artifacts
 
 

@@ -9,6 +9,7 @@ from dotmap import DotMap
 from typing import List
 import numpy as np
 import pickle
+import json
 
 load_dotenv()
 
@@ -84,7 +85,16 @@ def load_object(filepath):
     
 
 
+#save json
+def save_json(filepath,content):
+    try:
+        make_dir(Path(filepath))
 
+        with open(filepath,"w") as f:
+            json.dump(content,f,indent=4)
+            Logger.info(f"Json file has been saved on the location {filepath} Successfully. ")
+    except Exception as e:
+        raise CustomException(e)
         
 
 
