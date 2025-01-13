@@ -2,6 +2,7 @@ from src.pipeline.data_ingestion_pipeline import DataIngestionPipeline
 from src.pipeline.data_validation_pipeline import DataValidationPipeline
 from src.pipeline.data_transformation_pipeline import DataTransformationPipeline
 from src.pipeline.model_trainer_pipeline import ModelTrainerPipeline
+from src.pipeline.model_evaluation_pipeline import ModelEvaluationPipeline
 
 
 
@@ -29,3 +30,9 @@ print(data_transformation_artifacsts)
 model_trainer_pipeline_obj=ModelTrainerPipeline()
 model_trainer_artifacts=model_trainer_pipeline_obj.initiate_model_trainer_pipeline()
 print(model_trainer_artifacts)
+
+
+# Model Evaluation Pipeline
+model_evaluation_pipeline_obj=ModelEvaluationPipeline()
+model_evaluation_artifacts=model_evaluation_pipeline_obj.initiate_model_evaluation_pipeline()
+print(model_evaluation_artifacts)

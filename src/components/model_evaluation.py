@@ -58,14 +58,14 @@ class ModelEvaluation:
         
 
 
-if __name__=="__main__":
-    model_trainer_obj=ModelTrainerPipeline()
-    model_trainer_artifacts=model_trainer_obj.initiate_model_trainer_pipeline()
-    basic_config=TrainingPipelineConfig()
-    model_evaluation_config=ModelEvaluationConfig(basic_config)
-    model_evaluation_obj=ModelEvaluation(model_trainer_artifacts,model_evaluation_config)
-    res=model_evaluation_obj.initiate_model_evaluation()
-    print(res)
+# if __name__=="__main__":
+#     model_trainer_obj=ModelTrainerPipeline()
+#     model_trainer_artifacts=model_trainer_obj.initiate_model_trainer_pipeline()
+#     basic_config=TrainingPipelineConfig()
+#     model_evaluation_config=ModelEvaluationConfig(basic_config)
+#     model_evaluation_obj=ModelEvaluation(model_trainer_artifacts,model_evaluation_config)
+#     res=model_evaluation_obj.initiate_model_evaluation()
+#     print(res)
         
 
 
