@@ -1,0 +1,168 @@
+2025-01-13 13:16:06,903 - INFO -data_ingestion_pipeline - <<<<<<<<<<<<<< Data Ingestion Pipeline >>>>>>>>>>>>>>>>>>>> has been Started
+2025-01-13 13:16:15,201 - INFO -data_ingestion - DataIngestion Config Fetch Sucessfully..
+2025-01-13 13:16:15,202 - INFO -data_ingestion - Documemnts Extract Database Sucessfully...
+2025-01-13 13:16:18,888 - INFO -data_ingestion - Dataframe Create Successfully....
+2025-01-13 13:16:18,892 - INFO -common - New Directory has been created on the Location artifacts/data_ingestion/feature_store.
+2025-01-13 13:16:18,927 - INFO -data_ingestion - Data Export to feature Store Sucessfully..
+2025-01-13 13:16:18,928 - INFO -data_ingestion - Documemnts Extract Database Sucessfully...
+2025-01-13 13:16:23,786 - INFO -data_ingestion - Dataframe Create Successfully....
+2025-01-13 13:16:23,792 - INFO -data_ingestion - Data has been splitted into the train and test Sucessfully..
+2025-01-13 13:16:23,793 - INFO -common - New Directory has been created on the Location artifacts/data_ingestion/ingested.
+2025-01-13 13:16:23,820 - INFO -data_ingestion - Trainning data has been saved Sucessfully..
+2025-01-13 13:16:23,826 - INFO -data_ingestion - Test data has been Saved Sucessfully.
+2025-01-13 13:16:23,827 - INFO -data_ingestion_pipeline - <<<<<<<<<<<<<< Data Ingestion Pipeline >>>>>>>>>>>>>>>>>>>> has been Done
+2025-01-13 13:16:23,827 - INFO -data_validation_pipeline - <<<<<<<<<<<<<< Data Validation Pipeline >>>>>>>>>>>>>>>>>>>> has been Started
+2025-01-13 13:16:23,827 - INFO -data_ingestion_pipeline - <<<<<<<<<<<<<< Data Ingestion Pipeline >>>>>>>>>>>>>>>>>>>> has been Started
+2025-01-13 13:16:31,880 - INFO -data_ingestion - DataIngestion Config Fetch Sucessfully..
+2025-01-13 13:16:31,880 - INFO -data_ingestion - Documemnts Extract Database Sucessfully...
+2025-01-13 13:16:33,352 - INFO -data_ingestion - Dataframe Create Successfully....
+2025-01-13 13:16:33,357 - INFO -common - New Directory has been created on the Location artifacts/data_ingestion/feature_store.
+2025-01-13 13:16:33,424 - INFO -data_ingestion - Data Export to feature Store Sucessfully..
+2025-01-13 13:16:33,424 - INFO -data_ingestion - Documemnts Extract Database Sucessfully...
+2025-01-13 13:16:33,935 - INFO -data_ingestion - Dataframe Create Successfully....
+2025-01-13 13:16:33,942 - INFO -data_ingestion - Data has been splitted into the train and test Sucessfully..
+2025-01-13 13:16:33,942 - INFO -common - New Directory has been created on the Location artifacts/data_ingestion/ingested.
+2025-01-13 13:16:33,974 - INFO -data_ingestion - Trainning data has been saved Sucessfully..
+2025-01-13 13:16:33,982 - INFO -data_ingestion - Test data has been Saved Sucessfully.
+2025-01-13 13:16:33,982 - INFO -data_ingestion_pipeline - <<<<<<<<<<<<<< Data Ingestion Pipeline >>>>>>>>>>>>>>>>>>>> has been Done
+2025-01-13 13:16:33,983 - INFO -common - New Directory has been created on the Location artifacts.
+2025-01-13 13:16:33,995 - INFO -common - Yaml file has been read Successfully. 
+2025-01-13 13:16:33,996 - INFO -data_validation - DataFrame Columns has been validated Sucessfully.
+2025-01-13 13:16:33,996 - INFO -data_validation - Status Updated Sucessfully..  and Status is True
+2025-01-13 13:16:33,996 - INFO -data_validation - Number of Features are Equal to  schema features
+2025-01-13 13:16:34,005 - INFO -common - New Directory has been created on the Location artifacts/data_validation/valid_data.
+2025-01-13 13:16:34,038 - INFO -data_validation - Validated Training data has been saved...
+2025-01-13 13:16:34,041 - INFO -common - New Directory has been created on the Location artifacts/data_validation/valid_data.
+2025-01-13 13:16:34,049 - INFO -data_validation - Validated Test data has been saved...
+2025-01-13 13:16:34,122 - INFO -common - Yaml file Created Sucessfully..
+2025-01-13 13:16:34,122 - INFO -data_validation - Data Drift Report has been Updated...
+2025-01-13 13:16:34,122 - INFO -data_validation_pipeline - <<<<<<<<<<<<<< Data Validation Pipeline >>>>>>>>>>>>>>>>>>>> has been Done
+2025-01-13 13:16:34,122 - INFO -data_transformation_pipeline - <<<<<<< data transformation pipeline >>>>>>>>>>>> has been Started
+2025-01-13 13:16:34,122 - INFO -data_validation_pipeline - <<<<<<<<<<<<<< Data Validation Pipeline >>>>>>>>>>>>>>>>>>>> has been Started
+2025-01-13 13:16:34,122 - INFO -data_ingestion_pipeline - <<<<<<<<<<<<<< Data Ingestion Pipeline >>>>>>>>>>>>>>>>>>>> has been Started
+2025-01-13 13:16:42,243 - INFO -data_ingestion - DataIngestion Config Fetch Sucessfully..
+2025-01-13 13:16:42,244 - INFO -data_ingestion - Documemnts Extract Database Sucessfully...
+2025-01-13 13:16:44,317 - INFO -data_ingestion - Dataframe Create Successfully....
+2025-01-13 13:16:44,321 - INFO -common - New Directory has been created on the Location artifacts/data_ingestion/feature_store.
+2025-01-13 13:16:44,357 - INFO -data_ingestion - Data Export to feature Store Sucessfully..
+2025-01-13 13:16:44,358 - INFO -data_ingestion - Documemnts Extract Database Sucessfully...
+2025-01-13 13:16:45,246 - INFO -data_ingestion - Dataframe Create Successfully....
+2025-01-13 13:16:45,252 - INFO -data_ingestion - Data has been splitted into the train and test Sucessfully..
+2025-01-13 13:16:45,253 - INFO -common - New Directory has been created on the Location artifacts/data_ingestion/ingested.
+2025-01-13 13:16:45,279 - INFO -data_ingestion - Trainning data has been saved Sucessfully..
+2025-01-13 13:16:45,286 - INFO -data_ingestion - Test data has been Saved Sucessfully.
+2025-01-13 13:16:45,286 - INFO -data_ingestion_pipeline - <<<<<<<<<<<<<< Data Ingestion Pipeline >>>>>>>>>>>>>>>>>>>> has been Done
+2025-01-13 13:16:45,286 - INFO -common - New Directory has been created on the Location artifacts.
+2025-01-13 13:16:45,296 - INFO -common - Yaml file has been read Successfully. 
+2025-01-13 13:16:45,296 - INFO -data_validation - DataFrame Columns has been validated Sucessfully.
+2025-01-13 13:16:45,296 - INFO -data_validation - Status Updated Sucessfully..  and Status is True
+2025-01-13 13:16:45,296 - INFO -data_validation - Number of Features are Equal to  schema features
+2025-01-13 13:16:45,304 - INFO -common - New Directory has been created on the Location artifacts/data_validation/valid_data.
+2025-01-13 13:16:45,330 - INFO -data_validation - Validated Training data has been saved...
+2025-01-13 13:16:45,333 - INFO -common - New Directory has been created on the Location artifacts/data_validation/valid_data.
+2025-01-13 13:16:45,340 - INFO -data_validation - Validated Test data has been saved...
+2025-01-13 13:16:45,397 - INFO -common - Yaml file Created Sucessfully..
+2025-01-13 13:16:45,397 - INFO -data_validation - Data Drift Report has been Updated...
+2025-01-13 13:16:45,397 - INFO -data_validation_pipeline - <<<<<<<<<<<<<< Data Validation Pipeline >>>>>>>>>>>>>>>>>>>> has been Done
+2025-01-13 13:16:45,408 - INFO -data_transformation - Data Null values fill using the KNN imputer.
+2025-01-13 13:16:45,410 - INFO -common - Yaml file has been read Successfully. 
+2025-01-13 13:16:45,410 - INFO -data_transformation - Preprocessing pipeline has been added with knn imputer for handling the null values..
+2025-01-13 13:16:45,410 - INFO -data_transformation - Fitting the Preprocessor with train data...
+2025-01-13 13:16:45,414 - INFO -common - New Directory has been created on the Location artifacts/data_transformation/transformed.
+2025-01-13 13:16:45,415 - INFO -common - New Directory has been created on the Location artifacts/data_transformation/transformed.
+2025-01-13 13:16:45,416 - INFO -common - New Directory has been created on the Location artifacts/data_transformation/transformed/transformed_object.
+2025-01-13 13:16:45,418 - INFO -common - Object has been save to artifacts/data_transformation/transformed/transformed_object/preprocessor.pkl
+2025-01-13 13:16:45,418 - INFO -data_transformation_pipeline - <<<<<<< data transformation pipeline >>>>>>>>>>>> has been Done
+2025-01-13 13:16:45,418 - INFO -model_trainer_pipeline - <<<<<<< Model Trainer Pipeline >>>>>>>>>>>> has been Started
+2025-01-13 13:16:45,418 - INFO -data_transformation_pipeline - <<<<<<< data transformation pipeline >>>>>>>>>>>> has been Started
+2025-01-13 13:16:45,418 - INFO -data_validation_pipeline - <<<<<<<<<<<<<< Data Validation Pipeline >>>>>>>>>>>>>>>>>>>> has been Started
+2025-01-13 13:16:45,418 - INFO -data_ingestion_pipeline - <<<<<<<<<<<<<< Data Ingestion Pipeline >>>>>>>>>>>>>>>>>>>> has been Started
+2025-01-13 13:16:53,525 - INFO -data_ingestion - DataIngestion Config Fetch Sucessfully..
+2025-01-13 13:16:53,525 - INFO -data_ingestion - Documemnts Extract Database Sucessfully...
+2025-01-13 13:16:54,980 - INFO -data_ingestion - Dataframe Create Successfully....
+2025-01-13 13:16:54,984 - INFO -common - New Directory has been created on the Location artifacts/data_ingestion/feature_store.
+2025-01-13 13:16:55,017 - INFO -data_ingestion - Data Export to feature Store Sucessfully..
+2025-01-13 13:16:55,017 - INFO -data_ingestion - Documemnts Extract Database Sucessfully...
+2025-01-13 13:16:55,606 - INFO -data_ingestion - Dataframe Create Successfully....
+2025-01-13 13:16:55,610 - INFO -data_ingestion - Data has been splitted into the train and test Sucessfully..
+2025-01-13 13:16:55,610 - INFO -common - New Directory has been created on the Location artifacts/data_ingestion/ingested.
+2025-01-13 13:16:55,637 - INFO -data_ingestion - Trainning data has been saved Sucessfully..
+2025-01-13 13:16:55,643 - INFO -data_ingestion - Test data has been Saved Sucessfully.
+2025-01-13 13:16:55,644 - INFO -data_ingestion_pipeline - <<<<<<<<<<<<<< Data Ingestion Pipeline >>>>>>>>>>>>>>>>>>>> has been Done
+2025-01-13 13:16:55,644 - INFO -common - New Directory has been created on the Location artifacts.
+2025-01-13 13:16:55,653 - INFO -common - Yaml file has been read Successfully. 
+2025-01-13 13:16:55,653 - INFO -data_validation - DataFrame Columns has been validated Sucessfully.
+2025-01-13 13:16:55,653 - INFO -data_validation - Status Updated Sucessfully..  and Status is True
+2025-01-13 13:16:55,653 - INFO -data_validation - Number of Features are Equal to  schema features
+2025-01-13 13:16:55,659 - INFO -common - New Directory has been created on the Location artifacts/data_validation/valid_data.
+2025-01-13 13:16:55,685 - INFO -data_validation - Validated Training data has been saved...
+2025-01-13 13:16:55,687 - INFO -common - New Directory has been created on the Location artifacts/data_validation/valid_data.
+2025-01-13 13:16:55,694 - INFO -data_validation - Validated Test data has been saved...
+2025-01-13 13:16:55,754 - INFO -common - Yaml file Created Sucessfully..
+2025-01-13 13:16:55,754 - INFO -data_validation - Data Drift Report has been Updated...
+2025-01-13 13:16:55,754 - INFO -data_validation_pipeline - <<<<<<<<<<<<<< Data Validation Pipeline >>>>>>>>>>>>>>>>>>>> has been Done
+2025-01-13 13:16:55,764 - INFO -data_transformation - Data Null values fill using the KNN imputer.
+2025-01-13 13:16:55,765 - INFO -common - Yaml file has been read Successfully. 
+2025-01-13 13:16:55,765 - INFO -data_transformation - Preprocessing pipeline has been added with knn imputer for handling the null values..
+2025-01-13 13:16:55,765 - INFO -data_transformation - Fitting the Preprocessor with train data...
+2025-01-13 13:16:55,768 - INFO -common - New Directory has been created on the Location artifacts/data_transformation/transformed.
+2025-01-13 13:16:55,769 - INFO -common - New Directory has been created on the Location artifacts/data_transformation/transformed.
+2025-01-13 13:16:55,769 - INFO -common - New Directory has been created on the Location artifacts/data_transformation/transformed/transformed_object.
+2025-01-13 13:16:55,770 - INFO -common - Object has been save to artifacts/data_transformation/transformed/transformed_object/preprocessor.pkl
+2025-01-13 13:16:55,771 - INFO -data_transformation_pipeline - <<<<<<< data transformation pipeline >>>>>>>>>>>> has been Done
+2025-01-13 13:16:55,774 - INFO -common - Yaml file has been read Successfully. 
+2025-01-13 13:17:03,387 - INFO -common - Object has been save to artifacts/data_transformation/transformed/transformed_object/preprocessor.pkl
+2025-01-13 13:17:03,388 - INFO -common - New Directory has been created on the Location artifacts/model_trainer/trained_model.
+2025-01-13 13:17:03,397 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-13 13:17:03,398 - INFO -model_trainer - Model has been saved Sucessfully...
+2025-01-13 13:17:03,399 - INFO -model_trainer_pipeline - <<<<<<< Model Trainer Pipeline >>>>>>>>>>>> has been Done
+2025-01-13 13:17:03,399 - INFO -model_evaluation_pipeline - <<<<<<< Model Evaluation Pipeline >>>>>>>>>>>> has been Started
+2025-01-13 13:17:03,399 - INFO -model_trainer_pipeline - <<<<<<< Model Trainer Pipeline >>>>>>>>>>>> has been Started
+2025-01-13 13:17:03,399 - INFO -data_transformation_pipeline - <<<<<<< data transformation pipeline >>>>>>>>>>>> has been Started
+2025-01-13 13:17:03,399 - INFO -data_validation_pipeline - <<<<<<<<<<<<<< Data Validation Pipeline >>>>>>>>>>>>>>>>>>>> has been Started
+2025-01-13 13:17:03,399 - INFO -data_ingestion_pipeline - <<<<<<<<<<<<<< Data Ingestion Pipeline >>>>>>>>>>>>>>>>>>>> has been Started
+2025-01-13 13:17:11,504 - INFO -data_ingestion - DataIngestion Config Fetch Sucessfully..
+2025-01-13 13:17:11,505 - INFO -data_ingestion - Documemnts Extract Database Sucessfully...
+2025-01-13 13:17:13,659 - INFO -data_ingestion - Dataframe Create Successfully....
+2025-01-13 13:17:13,664 - INFO -common - New Directory has been created on the Location artifacts/data_ingestion/feature_store.
+2025-01-13 13:17:13,697 - INFO -data_ingestion - Data Export to feature Store Sucessfully..
+2025-01-13 13:17:13,698 - INFO -data_ingestion - Documemnts Extract Database Sucessfully...
+2025-01-13 13:17:14,556 - INFO -data_ingestion - Dataframe Create Successfully....
+2025-01-13 13:17:14,562 - INFO -data_ingestion - Data has been splitted into the train and test Sucessfully..
+2025-01-13 13:17:14,562 - INFO -common - New Directory has been created on the Location artifacts/data_ingestion/ingested.
+2025-01-13 13:17:14,588 - INFO -data_ingestion - Trainning data has been saved Sucessfully..
+2025-01-13 13:17:14,595 - INFO -data_ingestion - Test data has been Saved Sucessfully.
+2025-01-13 13:17:14,595 - INFO -data_ingestion_pipeline - <<<<<<<<<<<<<< Data Ingestion Pipeline >>>>>>>>>>>>>>>>>>>> has been Done
+2025-01-13 13:17:14,595 - INFO -common - New Directory has been created on the Location artifacts.
+2025-01-13 13:17:14,604 - INFO -common - Yaml file has been read Successfully. 
+2025-01-13 13:17:14,604 - INFO -data_validation - DataFrame Columns has been validated Sucessfully.
+2025-01-13 13:17:14,604 - INFO -data_validation - Status Updated Sucessfully..  and Status is True
+2025-01-13 13:17:14,604 - INFO -data_validation - Number of Features are Equal to  schema features
+2025-01-13 13:17:14,611 - INFO -common - New Directory has been created on the Location artifacts/data_validation/valid_data.
+2025-01-13 13:17:14,637 - INFO -data_validation - Validated Training data has been saved...
+2025-01-13 13:17:14,639 - INFO -common - New Directory has been created on the Location artifacts/data_validation/valid_data.
+2025-01-13 13:17:14,645 - INFO -data_validation - Validated Test data has been saved...
+2025-01-13 13:17:14,707 - INFO -common - Yaml file Created Sucessfully..
+2025-01-13 13:17:14,707 - INFO -data_validation - Data Drift Report has been Updated...
+2025-01-13 13:17:14,707 - INFO -data_validation_pipeline - <<<<<<<<<<<<<< Data Validation Pipeline >>>>>>>>>>>>>>>>>>>> has been Done
+2025-01-13 13:17:14,718 - INFO -data_transformation - Data Null values fill using the KNN imputer.
+2025-01-13 13:17:14,719 - INFO -common - Yaml file has been read Successfully. 
+2025-01-13 13:17:14,719 - INFO -data_transformation - Preprocessing pipeline has been added with knn imputer for handling the null values..
+2025-01-13 13:17:14,719 - INFO -data_transformation - Fitting the Preprocessor with train data...
+2025-01-13 13:17:14,722 - INFO -common - New Directory has been created on the Location artifacts/data_transformation/transformed.
+2025-01-13 13:17:14,722 - INFO -common - New Directory has been created on the Location artifacts/data_transformation/transformed.
+2025-01-13 13:17:14,723 - INFO -common - New Directory has been created on the Location artifacts/data_transformation/transformed/transformed_object.
+2025-01-13 13:17:14,723 - INFO -common - Object has been save to artifacts/data_transformation/transformed/transformed_object/preprocessor.pkl
+2025-01-13 13:17:14,725 - INFO -data_transformation_pipeline - <<<<<<< data transformation pipeline >>>>>>>>>>>> has been Done
+2025-01-13 13:17:14,727 - INFO -common - Yaml file has been read Successfully. 
+2025-01-13 13:17:20,347 - INFO -common - Object has been save to artifacts/data_transformation/transformed/transformed_object/preprocessor.pkl
+2025-01-13 13:17:20,348 - INFO -common - New Directory has been created on the Location artifacts/model_trainer/trained_model.
+2025-01-13 13:17:20,358 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-13 13:17:20,359 - INFO -model_trainer - Model has been saved Sucessfully...
+2025-01-13 13:17:20,359 - INFO -model_trainer_pipeline - <<<<<<< Model Trainer Pipeline >>>>>>>>>>>> has been Done
+2025-01-13 13:17:20,364 - INFO -common - Object has been save to artifacts/model_trainer/trained_model/model.pkl
+2025-01-13 13:17:20,442 - INFO -common - New Directory has been created on the Location artifacts/model_evaluation/train_metrics.
+2025-01-13 13:17:20,443 - INFO -common - Json file has been saved on the location artifacts/model_evaluation/train_metrics/train_metric.json Successfully. 
+2025-01-13 13:17:20,443 - INFO -common - New Directory has been created on the Location artifacts/model_evaluation/test_metrics.
+2025-01-13 13:17:20,443 - INFO -common - Json file has been saved on the location artifacts/model_evaluation/test_metrics/test_metric.json Successfully. 
+2025-01-13 13:17:20,444 - INFO -model_evaluation_pipeline - <<<<<<< Model Evaluation Pipeline >>>>>>>>>>>> has been Done

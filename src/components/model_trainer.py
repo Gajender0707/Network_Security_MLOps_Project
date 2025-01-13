@@ -84,6 +84,9 @@ class ModelTrainer:
             raise CustomException(e)
         
 
+
+
+
 # if __name__=="__main__":
 #     data_transforamtion_artifacts=DataTransformationPipeline().initiate_data_transformation_pipeline()
 #     # print(data_transforamtion_artifacts.initiate_data_transformation_pipeline())
