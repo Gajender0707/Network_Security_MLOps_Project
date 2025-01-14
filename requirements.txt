@@ -10,5 +10,6 @@ pyYAML
 ensure
 dotmap
 mlflow
+flask
 
 # -e .

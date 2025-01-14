@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Model</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        // Simulate training duration (e.g., 5 seconds) and then display the Prediction button
+        window.onload = function () {
+            const trainingMessage = document.getElementById("training-message");
+            const predictionButton = document.getElementById("prediction-button");
+            
+            setTimeout(() => {
+                trainingMessage.style.display = "none"; // Hide training message
+                predictionButton.style.display = "block"; // Show prediction button
+            }, 5000); // 5 seconds
+        };
+    </script>
+</head>
+<body>
+    <h1>Model Training</h1>
+    <div id="training-message">
+        <p>Training is in progress...</p>
+        <div class="spinner"></div>
+    </div>
+    <div id="prediction-button" style="display: none;">
+        <p>Training complete! Proceed to prediction:</p>
+        <button onclick="window.location.href='/predict'">Go to Prediction</button>
+    </div>
+</body>
+</html>

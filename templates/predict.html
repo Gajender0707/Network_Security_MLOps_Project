@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: auto;
+        }
+
+        .prediction-result {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #e0ffe0;
+            border: 1px solid #d4f4d4;
+            border-radius: 5px;
+            color: #2e8b57;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Model Prediction Result</h1>
+        <p>Your model has successfully made a prediction based on the provided inputs.</p>
+
+        <div class="prediction-result">
+            <h3>Prediction:</h3>
+            <p>{{ prediction }}</p>
+        </div> 
+
+        <div class="button-container">
+            <a href="/" class="btn">Go Back to Home</a>
+        </div>
+    </div>
+
+</body>
+</html>
