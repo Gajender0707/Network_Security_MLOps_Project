@@ -68,7 +68,7 @@ flask
 - git and github
 
 2. **Development Environment**:
-   - **VS Code** or **PyCharm**: Popular IDEs for writing and debugging Python code.
+   - **VS Code**: Popular IDEs for writing and debugging Python code.
    - **Jupyter Notebooks**: For interactive development, experimentation, and visualization of machine learning models.
    - **Docker**: For creating containerized environments to ensure reproducibility of experiments and ease of deployment.
 
@@ -76,9 +76,6 @@ flask
    - **Pandas**: For data manipulation and cleaning.
    - **NumPy**: For numerical computing and efficient handling of arrays and matrices.
    - **Scikit-learn**: For preprocessing, feature extraction, and implementing machine learning algorithms.
-   - **Keras / TensorFlow**: For deep learning model development.
-   - **XGBoost/LightGBM**: Advanced libraries for gradient boosting techniques.
-   - **PySpark**: For distributed data processing when working with large datasets.
 
 4. **Model Development and Training**:
    - **Scikit-learn**: For classical machine learning algorithms (e.g., decision trees, SVMs, random forests).
