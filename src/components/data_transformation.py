@@ -92,6 +92,12 @@ class DataTransformation:
 
             #save the preprocessor
             save_object(self.data_transforamtion_config.transformed_object_file_path,preprocessor_obj)
+            Logger.info("preprocessed has been saved Sucessfully.")
+
+            #save object to final dir for the pushing time in the cloud
+
+            save_object("final_artifacts/preprocessor.pkl",preprocessor)
+            Logger.info("preprocessed has been saved to final dir  Sucessfully.")
 
 
             data_transform_artifacts=DataTransformationArtifact(

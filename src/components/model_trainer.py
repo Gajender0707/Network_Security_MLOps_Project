@@ -70,6 +70,11 @@ class ModelTrainer:
             Logger.info("Model has been saved Sucessfully...")
 
 
+            ## save model to the final dir also for the pushing to cloud in the last
+            save_object("final_artifacts/model.pkl",best_model)  #give manually path
+            Logger.info("Model has been saved to final ")
+
+
             model_trainer_artifacts=ModelTrainerArtifacts(
                 self.model_trainer_config.trained_model_file_path,
                 train_data_file_path=self.data_transformation_artifacts.transformed_train_file_path,

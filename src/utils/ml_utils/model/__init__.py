@@ -20,7 +20,7 @@ def model_evaluate(X_train,y_train,X_test,y_test,models,models_params):
                 grid_search.fit(X_train, y_train)
 
                 # Best hyperparameters
-                # print("Best Hyperparameters:", grid_search.best_params_)
+                print("Best Hyperparameters:", grid_search.best_params_)
 
                 model.set_params(**grid_search.best_params_)
                 model.fit(X_train,y_train)
