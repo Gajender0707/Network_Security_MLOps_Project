@@ -57,4 +57,10 @@ MODEL_EVALUATION_TEST_METRIC_FILE_PATH:str="test_metric.json"
 
 
 
+#Final Artifacts
+FINAL_ARTIFACTS_PREPROCESSOR_FILE_PATH:str="final_artifacts/preprocessor.pkl"
+FINAL_ARTIFACTS_MODEL_FILE_PATH:str="final_artifacts/model.pkl"
+
+
+
 

@@ -2536,3 +2536,11 @@
 2025-01-14 12:44:57,488 - INFO -common - Object has been save to final_artifacts/model.pkl
 2025-01-14 12:44:57,500 - INFO -_internal - 127.0.0.1 - - [14/Jan/2025 12:44:57] "POST /predict HTTP/1.1" 200 -
 2025-01-14 12:44:57,512 - INFO -_internal - 127.0.0.1 - - [14/Jan/2025 12:44:57] "[33mGET /styles.css HTTP/1.1[0m" 404 -
+2025-01-16 12:01:17,824 - INFO -common - Object has been save to final_artifacts/preprocessor.pkl
+2025-01-16 12:01:17,835 - INFO -common - Object has been save to final_artifacts/model.pkl
+2025-01-16 12:01:41,200 - INFO -common - Object has been save to final_artifacts/preprocessor.pkl
+2025-01-16 12:01:41,211 - INFO -common - Object has been save to final_artifacts/model.pkl
+2025-01-16 12:04:00,327 - INFO -common - Object has been save to final_artifacts/preprocessor.pkl
+2025-01-16 12:04:00,336 - INFO -common - Object has been save to final_artifacts/model.pkl
+2025-01-16 12:04:11,007 - INFO -common - Object has been save to final_artifacts/preprocessor.pkl
+2025-01-16 12:04:11,016 - INFO -common - Object has been save to final_artifacts/model.pkl

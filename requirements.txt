@@ -11,5 +11,6 @@ ensure
 dotmap
 mlflow
 flask
+pytest
 
 # -e .
