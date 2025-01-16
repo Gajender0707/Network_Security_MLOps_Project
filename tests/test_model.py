@@ -1,5 +1,3 @@
-# from src.logging.logging import Logger
-# from src.exception.exception import CustomException
 from src.Constant.training_pipeline import FINAL_ARTIFACTS_PREPROCESSOR_FILE_PATH,FINAL_ARTIFACTS_MODEL_FILE_PATH
 from src.utils.ml_utils.model import NetworkModel
 from src.utils.common import load_object
