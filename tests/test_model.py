@@ -3,6 +3,7 @@ from src.utils.ml_utils.model import NetworkModel
 from src.utils.common import load_object
 import numpy as np
 import pandas as pd
+import pytest
 
 
 
