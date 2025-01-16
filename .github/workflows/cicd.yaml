@@ -29,7 +29,7 @@ jobs:
     # 4. Run Tests (specific to test_model.py)
     - name: Run tests (test_model.py)
       run: |
-        pytest test_model.py  # Run only the test_model.py file
+        pytest tests/test_model.py  # Run only the test_model.py file
 
 
 #     #Continuous delivery
