@@ -8,6 +8,8 @@ on:
 jobs:
   continuous-integration:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src  # Set PYTHONPATH to the 'src' directory
 
     steps:
     # 1. Checkout the Code
