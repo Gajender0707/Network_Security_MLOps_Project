@@ -8,8 +8,6 @@ on:
 jobs:
   continuous-integration:
     runs-on: ubuntu-latest
-    env:
-      PYTHONPATH: ${{ github.workspace }}/src  # Set PYTHONPATH to the 'src' directory
 
     steps:
     # 1. Checkout the Code
@@ -30,6 +28,8 @@ jobs:
 
     # 4. Run Tests (specific to test_model.py)
     - name: Run tests (test_model.py)
+      env:
+        PYTHONPATH: ${{ github.workspace }}/src  # Set PYTHONPATH for this step
       run: |
         pytest tests/test_model.py  # Run only the test_model.py file
 
