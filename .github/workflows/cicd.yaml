@@ -68,3 +68,43 @@ jobs:
     - name: Push Docker Image to ECR
       run: |
         docker push ${{ secrets.AWS_ECR_REPOSITORY_URI }}
+
+
+  #Continuous delivery
+  continuous-deployment:
+    needs: build-and-push-to-ecr
+    runs-on: self-hosted
+
+    steps:
+    # 1. Checkout the Code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # 2. config aws Credentials
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v3
+      with:
+        aws-access-key-id: ${{ secrets.ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    # 3. Log in to Amazon ECR
+    - name: Log in to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v2
+
+     # Pull Docker Image from ECR
+    - name: Pull Docker Image from ECR
+      run: |
+        docker pull ${{ secrets.AWS_ECR_REPOSITORY_URI }}:latest
+
+      # Deploy Docker Image to EC2 Instance
+    - name: Deploy to EC2
+      run: |
+        docker run -d --name my_app -p 8080:8080 ${{ secrets.AWS_ECR_REPOSITORY_URI }}:latest
+
+    - name: clean pervious image and container
+      run: |
+        docker system prune -f
+
+
