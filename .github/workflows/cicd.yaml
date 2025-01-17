@@ -27,43 +27,44 @@ jobs:
         pip install -r requirements.txt  # Install all dependencies, including pytest
 
     # 4. Run Tests (specific to test_model.py)
-    - name: Run tests (test_model.py)
-      # env:
-      #   PYTHONPATH: ${{ github.workspace }}/src  # Set PYTHONPATH for this step
+    # - name: Run tests (test_model.py)
+    #   # env:
+    #   #   PYTHONPATH: ${{ github.workspace }}/src  # Set PYTHONPATH for this step
+    #   run: |
+    #     pytest tests/test_model.py  # Run only the test_model.py file
+
+
+    #Continuous delivery
+  build-and-push-to-ecr:
+    needs: continuous-integration
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Checkout the Code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+     # 2. config aws Credentials
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v3
+      with:
+        aws-access-key-id: ${{ secrets.ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    # 3. Log in to Amazon ECR
+    - name: Log in to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v2
+
+
+    # 4. Build and Tag the Docker Image
+    - name: Build Docker Image
       run: |
-        pytest tests/test_model.py  # Run only the test_model.py file
+        docker build -t my-app:latest .
+        docker tag my-app:latest ${{ secrets.AWS_ECR_REPOSITORY_URI }}
 
-
-#     #Continuous delivery
-#   build-and-push-to-ecr:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     # 1. Checkout the Code
-#     - name: Checkout code
-#       uses: actions/checkout@v3
-
-#      # 2. config aws Credentials
-#     - name: Configure AWS credentials
-#       uses: aws-actions/configure-aws-credentials@v3
-#       with:
-#         aws-access-key-id: ${{ secrets.ACCESS_KEY }}
-#         aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
-#         aws-region: ${{ secrets.AWS_REGION }}
-
-#     # 3. Log in to Amazon ECR
-#     - name: Log in to Amazon ECR
-#       id: login-ecr
-#       uses: aws-actions/amazon-ecr-login@v2
-
-
-#     # 4. Build and Tag the Docker Image
-#     - name: Build Docker Image
-#       run: |
-#         docker build -t my-app:latest .
-#         docker tag my-app:latest ${{ secrets.AWS_ECR_REPOSITORY_URI }}
-
-#     # 5. Push Docker Image to Amazon ECR
-#     - name: Push Docker Image to ECR
-#       run: |
-#         docker push ${{ secrets.AWS_ECR_REPOSITORY_URI }}
+    # 5. Push Docker Image to Amazon ECR
+    - name: Push Docker Image to ECR
+      run: |
+        docker push ${{ secrets.AWS_ECR_REPOSITORY_URI }}
