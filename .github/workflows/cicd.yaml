@@ -101,6 +101,8 @@ jobs:
       # Deploy Docker Image to EC2 Instance
     - name: Deploy to EC2
       run: |
+        docker stop my_app || true
+        docker rm my_app || true
         docker run -d --name my_app -p 8080:8080 ${{ secrets.AWS_ECR_REPOSITORY_URI }}:latest
 
     - name: clean pervious image and container
