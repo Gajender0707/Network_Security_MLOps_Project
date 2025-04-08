@@ -19,6 +19,15 @@ The goal of the Phishing Website Detection project is to build a machine learnin
 The dataset contains various features extracted from URLs and web pages, which can be used to determine whether a website is legitimate or malicious (phishing).
 
 ***
+
+***
+## Data Source 
+This project uses the [Phishing Websites Dataset](https://archive.ics.uci.edu/dataset/327/phishing+websites) from the UCI Machine Learning Repository. The dataset contains 11,055 samples and 31 columns (30 features and 1 target label) to classify URLs as either **phishing** (`-1`) or **legitimate** (`1`).
+
+**Citation:**
+M.A. AbuKhousa and I. Aljarah, Department of Information Technology, Palestine Technical University, and College of Computer Information Technology, Jordan University of Science and Technology.
+***
+
 ***
 ## Problem Statement
 Phishing is a type of cyber attack where attackers deceive users by pretending to be legitimate websites, with the aim of stealing sensitive information such as usernames, passwords, credit card numbers, and other personal data. Phishing websites often resemble well-known websites, making it difficult for users to differentiate between legitimate and malicious sites. This poses a significant risk to users’ security and privacy.
